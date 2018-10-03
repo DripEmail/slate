@@ -198,6 +198,7 @@ None.
 ```shell
 curl -X POST "https://api.getdrip.com/v2/YOUR_ACCOUNT_ID/webhooks" \
   -H 'User-Agent: Your App Name (www.yourapp.com)' \
+  -H 'Content-Type: applicaton/json' \
   -u YOUR_API_KEY: \
   -d @- << EOF
   {
@@ -304,7 +305,7 @@ client.createWebhook(payload)
     </tr>
     <tr>
       <td><code>events</code></td>
-      <td>Optional. An Array specifiying which events we should send notifications for. Eligible events can be found in the <a href="#webhook-events">webhooks documentation</a>. By default, we will send notifications for all events except <code>subscrber.received_email</code>.</td>
+      <td>Optional. An Array specifiying which events we should send notifications for. Eligible events can be found in the <a href="#webhook-events">webhooks documentation</a>. By default, we will send notifications for all events except <code>subscriber.received_email</code>.</td>
     </tr>
   </tbody>
 </table>
