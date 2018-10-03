@@ -6,6 +6,7 @@
 
 ```shell
 curl -X POST "https://api.getdrip.com/v2/YOUR_ACCOUNT_ID/subscribers/batches" \
+  -H 'Content-Type: applicaton/json' \
   -H 'User-Agent: Your App Name (www.yourapp.com)' \
   -u YOUR_API_KEY: \
   -d @- << EOF
@@ -124,6 +125,7 @@ request and the time your data appears in the user interface.
 
 ```shell
 curl -X POST "https://api.getdrip.com/v2/YOUR_ACCOUNT_ID/unsubscribes/batches" \
+  -H 'Content-Type: applicaton/json' \
   -H 'User-Agent: Your App Name (www.yourapp.com)' \
   -u YOUR_API_KEY: \
   -d @- << EOF
@@ -224,6 +226,7 @@ client.unsubscribeBatchSubscribers(payload)
 ```shell
 curl -X POST "https://api.getdrip.com/v2/YOUR_ACCOUNT_ID/subscribers/batches" \
   -H 'User-Agent: Your App Name (www.yourapp.com)' \
+  -H 'Content-Type: applicaton/json' \
   -u YOUR_API_KEY: \
   -d @- << EOF
   {
@@ -334,6 +337,7 @@ request and the time your data appears in the user interface.
 ```shell
 curl -X POST "https://api.getdrip.com/v2/YOUR_ACCOUNT_ID/orders/batches" \
   -H 'User-Agent: Your App Name (www.yourapp.com)' \
+  -H 'Content-Type: applicaton/json' \
   -u YOUR_API_KEY: \
   -d @- << EOF
   {

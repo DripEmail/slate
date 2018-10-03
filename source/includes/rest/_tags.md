@@ -86,6 +86,7 @@ None.
 ```shell
 curl -X POST "https://api.getdrip.com/v2/YOUR_ACCOUNT_ID/tags" \
   -H 'User-Agent: Your App Name (www.yourapp.com)' \
+  -H 'Content-Type: applicaton/json' \
   -u YOUR_API_KEY: \
   -d @- << EOF
   {
