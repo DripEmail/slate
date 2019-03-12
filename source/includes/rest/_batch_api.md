@@ -491,7 +491,7 @@ curl -X POST "https://api.getdrip.com/v2/YOUR_ACCOUNT_ID/orders/batches" \
 {}
 ```
 <aside class="notice color-notice">
-We’ve released a new and improved endpoint for Orders functionality! This new endpoint will allow you to trigger automations and segment people based on the items contained in their orders. Check it out <a href="#order-activity">here</a>.
+We’ve released a new and improved endpoint for Orders functionality! This new endpoint will allow you to trigger automations and segment people based on the items contained in their orders. Check it out <a href="#create-or-update-a-batch-of-orders-shopper-activity">here</a>.
 
 <br>
 <br>
@@ -520,6 +520,186 @@ request and the time your data appears in the user interface.
     <tr>
       <td><code>orders</code></td>
       <td>Required. An Array with between 1 and 1000 objects containing <a href="#orders">order data</a>.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Create or update a batch of orders (Shopper Activity)
+
+> To create or update a batch of orders:
+
+```shell
+curl -X POST "https://api.getdrip.com/v3/YOUR_ACCOUNT_ID/shopper_activity/order/batch" \
+  -H "Content-Type: application/json" \
+  -H 'User-Agent: Your App Name (www.yourapp.com)' \
+  -u YOUR_API_KEY: \
+  -d @- << EOF
+  {
+    "orders": [
+      {
+        "provider": "magento",
+        "email": "john@acme.com",
+        "action": "created",
+        "occurred_at": "2019-03-12T15:31:58Z",
+        "order_id": "abcdef",
+        "order_public_id": "Order_123456",
+        "grand_total": 49.00,
+        "total_discounts": 1.00,
+        "total_taxes": 1.00,
+        "total_fees": 0,
+        "currency": "USD",
+        "order_url": "http://myorders.com/orders/123456",
+        "size": "medium",
+        "color": "red",
+        "items": [{
+          "product_id": "opqrs",
+          "product_variant_id": "zyxwv",
+          "sku": "4444",
+          "name": "Canoe",
+          "brand": "Golden River",
+          "categories": [
+            "sport",
+            "outdoor"
+          ],
+          "price": 49.00,
+          "quantity": 1,
+          "discount": 1.00,
+          "tax": 1.00,
+          "fees": 0,
+          "total": 49.00,
+          "color": "black"
+        }],
+        "billing_address": {
+          "label": "Billing",
+          "first_name": "Bill",
+          "last_name": "Billington",
+          "company": "Bills R US",
+          "address_1": "123 Bill St.",
+          "address_2": "Apt. B",
+          "city": "Billtown",
+          "state": "CA",
+          "postal_code": "01234",
+          "country": "United States",
+          "phone": "555-555-5555",
+          "email": "bill@bills.com"
+        },
+        "shipping_address": {
+          "label": "Shipping",
+          "first_name": "Ship",
+          "last_name": "Shipington",
+          "company": "Shipping 4 Less",
+          "address_1": "123 Ship St.",
+          "address_2": "null",
+          "city": "Shipville",
+          "state": "CA",
+          "postal_code": "01234",
+          "country": "United States",
+          "phone": "555-555-5555",
+          "email": "ship@shipping.com"
+        }
+      },
+      {
+        "provider": "magento",
+        "email": "user@gmail.com",
+        "action": "updated",
+        "occurred_at": "2019-03-12T15:27:16Z",
+        "order_id": "456445746",
+        "order_public_id": "#5",
+        "grand_total": 21.48,
+        "total_discounts": 5.34,
+        "total_taxes": 1.00,
+        "total_fees": 2.00,
+        "total_shipping": 5.00,
+        "currency": "USD",
+        "order_url": "https://mysuperstore.com/order/456445746",
+        "items": [
+          {
+            "product_id": "B01J4SWO1G",
+            "product_variant_id": "B01J4SWO1G-CW-BOTT",
+            "sku": "XHB-1234",
+            "name": "The Coolest Water Bottle",
+            "brand": "Drip",
+            "categories": [
+              "Accessories"
+            ],
+            "price": 11.16,
+            "sale_price": 10.16,
+            "quantity": 2,
+            "discounts": 5.34,
+            "taxes": 1.00,
+            "fees": 0.50,
+            "shipping": 5.00,
+            "total": 21.48,
+            "product_url": "https://mysuperstore.com/dp/B01J4SWO1G",
+            "image_url": "https://www.getdrip.com/images/example_products/water_bottle.png",
+            "product_tag": "Best Seller"
+          }
+        ],
+        "billing_address": {
+          "label": "Primary Billing",
+          "first_name": "Bill",
+          "last_name": "Billington",
+          "company": "Bills R US",
+          "address_1": "123 Bill St.",
+          "address_2": "Apt. B",
+          "city": "Billtown",
+          "state": "CA",
+          "postal_code": "01234",
+          "country": "United States",
+          "phone": "555-555-5555"
+        },
+        "shipping_address": {
+          "label": "Downtown Office",
+          "first_name": "Ship",
+          "last_name": "Shipington",
+          "company": "Shipping 4 Less",
+          "address_1": "123 Ship St.",
+          "city": "Shipville",
+          "state": "CA",
+          "postal_code": "01234",
+          "country": "United States",
+          "phone": "555-555-5555"
+        }
+      }
+    ]
+  }
+  EOF
+```
+
+> Responds with a <code>202 Accepted</code> if successful. That means the server accepted the request and queued it for processing. The response includes a list of unique request_ids that can be used to check the status of the request later on:
+
+```json
+{
+  "request_ids": [
+    "db8a7b16-32dd-4863-8b6e-818e3eaab99a",
+    "002048e9-3692-4f0a-8bbf-80a077acf642"
+  ]
+}
+```
+</aside>
+
+We recommend using this API endpoint when you need to import a collection of orders that will likely exceed the regular rate limit of 3,600 requests per hour.
+
+Note: Since our batch APIs process requests in the background, there may be a delay between the time you submit your
+request and the time your data appears in the user interface.
+
+### HTTP Endpoint
+
+`POST /v3/:account_id/shopper_activity/order/batch`
+
+### Arguments
+
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>orders</code></td>
+      <td>Required. An Array with between 1 and 1000 objects containing <a href="#order-activity">order events</a>.</td>
     </tr>
   </tbody>
 </table>
