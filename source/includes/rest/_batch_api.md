@@ -491,7 +491,7 @@ curl -X POST "https://api.getdrip.com/v2/YOUR_ACCOUNT_ID/orders/batches" \
 {}
 ```
 <aside class="notice color-notice">
-We’ve released a new and improved endpoint for Orders functionality! This new endpoint will allow you to trigger automations and segment people based on the items contained in their orders. Check it out <a href="#create-or-update-a-batch-of-orders-shopper-activity">here</a>.
+We’ve released a new and improved batch endpoint for Orders functionality! Check it out <a href="#create-or-update-a-batch-of-orders-shopper-activity">here</a>.
 
 <br>
 <br>
@@ -524,7 +524,7 @@ request and the time your data appears in the user interface.
   </tbody>
 </table>
 
-## Create or update a batch of orders (Shopper Activity)
+## Create or update a batch of orders
 
 > To create or update a batch of orders:
 
@@ -541,36 +541,40 @@ curl -X POST "https://api.getdrip.com/v3/YOUR_ACCOUNT_ID/shopper_activity/order/
         "email": "john@acme.com",
         "action": "created",
         "occurred_at": "2019-03-12T15:31:58Z",
-        "order_id": "abcdef",
-        "order_public_id": "Order_123456",
-        "grand_total": 49.00,
+        "order_id": "63754763",
+        "order_public_id": "#4",
+        "grand_total": 54.00,
         "total_discounts": 1.00,
         "total_taxes": 1.00,
         "total_fees": 0,
+        "total_shipping": 5.00,
         "currency": "USD",
-        "order_url": "http://myorders.com/orders/123456",
+        "order_url": "http://myorders.com/orders/4",
         "size": "medium",
         "color": "red",
         "items": [{
-          "product_id": "opqrs",
-          "product_variant_id": "zyxwv",
-          "sku": "4444",
-          "name": "Canoe",
-          "brand": "Golden River",
+          "product_id": "B01F9AQ99M",
+          "product_variant_id": "B01F9AQ99M-YEL-BT",
+          "sku": "JDT-4321",
+          "name": "Yellow Boots of Might",
+          "brand": "Drip",
           "categories": [
-            "sport",
-            "outdoor"
+            "Of Might",
+            "Outdoors"
           ],
           "price": 49.00,
           "quantity": 1,
-          "discount": 1.00,
-          "tax": 1.00,
+          "discounts": 1.00,
+          "taxes": 1.00,
           "fees": 0,
-          "total": 49.00,
-          "color": "black"
+          "shipping": 5.00,
+          "total": 54.00,
+          "color": "black",
+          "product_url": "https://mysuperstore.com/dp/B01F9AQ99M",
+          "image_url": "https://www.getdrip.com/images/example_products/boots.png"
         }],
         "billing_address": {
-          "label": "Billing",
+          "label": "Primary Billing",
           "first_name": "Bill",
           "last_name": "Billington",
           "company": "Bills R US",
@@ -580,11 +584,10 @@ curl -X POST "https://api.getdrip.com/v3/YOUR_ACCOUNT_ID/shopper_activity/order/
           "state": "CA",
           "postal_code": "01234",
           "country": "United States",
-          "phone": "555-555-5555",
-          "email": "bill@bills.com"
+          "phone": "555-555-5555"
         },
         "shipping_address": {
-          "label": "Shipping",
+          "label": "Downtown Office",
           "first_name": "Ship",
           "last_name": "Shipington",
           "company": "Shipping 4 Less",
@@ -594,8 +597,7 @@ curl -X POST "https://api.getdrip.com/v3/YOUR_ACCOUNT_ID/shopper_activity/order/
           "state": "CA",
           "postal_code": "01234",
           "country": "United States",
-          "phone": "555-555-5555",
-          "email": "ship@shipping.com"
+          "phone": "555-555-5555"
         }
       },
       {
@@ -611,7 +613,7 @@ curl -X POST "https://api.getdrip.com/v3/YOUR_ACCOUNT_ID/shopper_activity/order/
         "total_fees": 2.00,
         "total_shipping": 5.00,
         "currency": "USD",
-        "order_url": "https://mysuperstore.com/order/456445746",
+        "order_url": "https://mysuperstore.com/order/5",
         "items": [
           {
             "product_id": "B01J4SWO1G",
@@ -699,7 +701,7 @@ request and the time your data appears in the user interface.
   <tbody>
     <tr>
       <td><code>orders</code></td>
-      <td>Required. An Array with between 1 and 1000 objects containing <a href="#order-activity">order events</a>.</td>
+      <td>Required. An Array with between 1 and 1000 objects containing <a href="#order-activity">order activity</a>.</td>
     </tr>
   </tbody>
 </table>
