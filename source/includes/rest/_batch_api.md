@@ -550,8 +550,6 @@ curl -X POST "https://api.getdrip.com/v3/YOUR_ACCOUNT_ID/shopper_activity/order/
         "total_shipping": 5.00,
         "currency": "USD",
         "order_url": "http://myorders.com/orders/4",
-        "size": "medium",
-        "color": "red",
         "items": [{
           "product_id": "B01F9AQ99M",
           "product_variant_id": "B01F9AQ99M-YEL-BT",
