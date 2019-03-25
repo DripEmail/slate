@@ -537,7 +537,7 @@ curl -X POST "https://api.getdrip.com/v3/YOUR_ACCOUNT_ID/shopper_activity/order/
   {
     "orders": [
       {
-        "provider": "magento",
+        "provider": "my_custom_platform",
         "email": "john@acme.com",
         "action": "created",
         "occurred_at": "2019-03-12T15:31:58Z",
@@ -599,7 +599,7 @@ curl -X POST "https://api.getdrip.com/v3/YOUR_ACCOUNT_ID/shopper_activity/order/
         }
       },
       {
-        "provider": "magento",
+        "provider": "my_custom_platform",
         "email": "user@gmail.com",
         "action": "updated",
         "occurred_at": "2019-03-12T15:27:16Z",

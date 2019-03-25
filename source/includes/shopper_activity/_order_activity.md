@@ -17,7 +17,7 @@ curl -X POST "https://api.getdrip.com/v3/YOUR_ACCOUNT_ID/shopper_activity/order"
   -u YOUR_API_KEY: \
   -d @- << EOF
   {
-    "provider": "magento",
+    "provider": "my_custom_platform",
     "email": "user@gmail.com",
     "action": "created",
     "occurred_at": "2019-01-17T20:50:00Z",
@@ -106,7 +106,7 @@ curl -X POST "https://api.getdrip.com/v3/YOUR_ACCOUNT_ID/shopper_activity/order"
   <tbody>
     <tr>
       <td><code>provider</code></td>
-      <td>Required. The identifier for the provider from which the order data was received in lower snake cased form. For example, <code>shopify</code> or <code>magento</code> or <code>my_store</code>.</td>
+      <td>Required. The identifier for the provider from which the order data was received in lower snake cased form. For example, <code>shopify</code> or <code>my_custom_platform</code> or <code>my_store</code>.</td>
     </tr>
     <tr>
       <td><code>person_id</code></td>

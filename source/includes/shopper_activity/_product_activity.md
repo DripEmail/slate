@@ -1,6 +1,6 @@
 # Product Activity
 
-Product Activity will not show up directly on people's timelines. If a product's price is updated, then a "Product price reduced" event will show on the timeline of any person who has added that product to a cart at a higher price within the last 2 weeks and who has not placed an order for that product.
+Using the Product Activity endpoint will enable product-triggered automations in your Drip account. An example: price drop notifications. Send an email when a product in a customer’s cart drops in price, encouraging the customer to return and place an order.
 
 ## Create or update a product
 
@@ -15,10 +15,10 @@ curl -X POST "https://api.getdrip.com/v3/YOUR_ACCOUNT_ID/shopper_activity/produc
   -u YOUR_API_KEY: \
   -d @- << EOF
   {
-    "provider": "magento",
+    "provider": "my_custom_platform",
     "action": "created",
-    "product_id": "B01J4SWO1G",
     "occurred_at": "2019-01-28T12:15:23Z",
+    "product_id": "B01J4SWO1G",
     "product_variant_id": "B01J4SWO1G-CW-BOTT",
     "sku": "XHB-1234",
     "name": "The Coolest Water Bottle",
@@ -29,8 +29,7 @@ curl -X POST "https://api.getdrip.com/v3/YOUR_ACCOUNT_ID/shopper_activity/produc
     "price": 11.16,
     "inventory": 42,
     "product_url": "https://mysuperstore.com/dp/B01J4SWO1G",
-    "image_url": "https://www.getdrip.com/images/example_products/water_bottle.png",
-    "product_tag": "Best Seller"
+    "image_url": "https://www.getdrip.com/images/example_products/water_bottle.png"
   }
   EOF
 ```
@@ -59,7 +58,7 @@ curl -X POST "https://api.getdrip.com/v3/YOUR_ACCOUNT_ID/shopper_activity/produc
   <tbody>
     <tr>
       <td><code>provider</code></td>
-      <td>Required. The identifier for the provider from which the product data was received in lower snake cased form. For example, <code>shopify</code> or <code>magento</code> or <code>my_store</code>.</td>
+      <td>Required. The identifier for the provider from which the product data was received in lower snake cased form. For example, <code>shopify</code> or <code>my_custom_platform</code> or <code>my_store</code>.</td>
     </tr>
     <tr>
       <td><code>action</code></td>
@@ -98,12 +97,8 @@ curl -X POST "https://api.getdrip.com/v3/YOUR_ACCOUNT_ID/shopper_activity/produc
       <td>Required. The price of a single product.</td>
     </tr>
     <tr>
-      <td><code>sale_price</code></td>
-      <td>Optional. Whatever this is.</td>
-    </tr>
-    <tr>
       <td><code>inventory</code></td>
-      <td>Optional. Integer. The current inventory of the product.</td>
+      <td>Optional. Integer. The currently available inventory of the product.</td>
     </tr>
     <tr>
       <td><code>product_url</code></td>
@@ -115,7 +110,5 @@ curl -X POST "https://api.getdrip.com/v3/YOUR_ACCOUNT_ID/shopper_activity/produc
     </tr>
   </tbody>
 </table>
-
-The API will also allow custom attributes to be passed in. These will be exposed within Drip just like [event properties](https://help.drip.com/hc/en-us/articles/115003737312-Event-Properties).
 
 For example, if your platform includes the concept of product tags, you can include a product_tag attribute in the JSON that can be used in a Drip automation or email [via Liquid](https://help.drip.com/hc/en-us/articles/115003737312-Event-Properties#access-properties). You can attach custom attributes either to events or their items.
