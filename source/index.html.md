@@ -48,6 +48,7 @@ includes_shopper_activity:
   - shopper_activity/overview
   - shopper_activity/cart_activity
   - shopper_activity/order_activity
+  - shopper_activity/product_activity
 
 search: true
 ---
