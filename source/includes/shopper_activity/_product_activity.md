@@ -110,5 +110,3 @@ curl -X POST "https://api.getdrip.com/v3/YOUR_ACCOUNT_ID/shopper_activity/produc
     </tr>
   </tbody>
 </table>
-
-For example, if your platform includes the concept of product tags, you can include a product_tag attribute in the JSON that can be used in a Drip automation or email [via Liquid](https://help.drip.com/hc/en-us/articles/115003737312-Event-Properties#access-properties). You can attach custom attributes either to events or their items.
