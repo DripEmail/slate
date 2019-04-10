@@ -19,7 +19,7 @@ curl -X POST "https://api.getdrip.com/v3/YOUR_ACCOUNT_ID/shopper_activity/order"
   {
     "provider": "magento",
     "email": "user@gmail.com",
-    "action": "created",
+    "action": "placed",
     "occurred_at": "2019-01-17T20:50:00Z",
     "order_id": "456445746",
     "order_public_id": "#5",
