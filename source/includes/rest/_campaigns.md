@@ -565,7 +565,7 @@ const payload = {
       name: "Jane Doe"
     }
   }]
-}
+};
 
 client.subscribeToCampaign(campaignId, payload)
   .then((response) => {

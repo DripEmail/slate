@@ -246,7 +246,7 @@ const payload = {
       "subscriber.subscribed_to_campaign"
     ]
   }]
-}
+};
 
 client.createWebhook(payload)
   .then((response) => {

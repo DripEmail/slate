@@ -369,7 +369,7 @@ const payload = {
       name: "John Doe"
     }
   }]
-}
+};
 
 client.startOnWorkflow(workflowId, payload)
   .then((response) => {
@@ -634,7 +634,7 @@ const payload = {
       landing_page: "My Landing Page"
     }
   ]}
-}
+};
 
 client.createTrigger(workflowId, payload)
   .then((response) => {
@@ -758,7 +758,7 @@ const payload = {
       landing_page: "My Landing Page"
     }
   ]}
-}
+};
 
 client.updateTrigger(workflowId, triggerId, payload)
   .then((response) => {

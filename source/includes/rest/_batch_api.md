@@ -66,15 +66,15 @@ end
 
 const client = require('drip-nodejs')({ token: YOUR_API_KEY, accountId: YOUR_ACCOUNT_ID });
 const batch = {
-  "batches": [{
-    "subscribers": [
+  batches: [{
+    subscribers: [
       {
-        "email": "john@acme.com",
-        "tags": "Dog Person"
+        email: "john@acme.com",
+        tags: "Dog Person"
       },
       {
-        "email": "jane@acme.com",
-        "tags": "Cat Person"
+        email: "jane@acme.com",
+        tags: "Cat Person"
       }
       // Lots more subscribers...
     ]
@@ -175,16 +175,11 @@ end
 
 const client = require('drip-nodejs')({ token: YOUR_API_KEY, accountId: YOUR_ACCOUNT_ID });
 const payload = {
-  batches:
-  [
-    {
-      subscribers: [
-        {
-          email: 'someone@example.com'
-        }
-      ]
-    }
-  ]
+  batches: [{
+    subscribers: [{
+      email: 'someone@example.com'
+    }]
+  }]
 };
 
 client.unsubscribeBatchSubscribers(payload)
