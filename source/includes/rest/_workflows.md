@@ -362,11 +362,13 @@ end
 const client = require('drip-nodejs')({ token: YOUR_API_KEY, accountId: YOUR_ACCOUNT_ID });
 const workflowId = 222333;
 const payload = {
-  email: "john@acme.com",
-  time_zone: "America/Los_Angeles",
-  custom_fields: {
-    name: "John Doe"
-  }
+  subscribers: [{
+    email: "john@acme.com",
+    time_zone: "America/Los_Angeles",
+    custom_fields: {
+      name: "John Doe"
+    }
+  }]
 }
 
 client.startOnWorkflow(workflowId, payload)
@@ -625,11 +627,13 @@ end
 const client = require('drip-nodejs')({ token: YOUR_API_KEY, accountId: YOUR_ACCOUNT_ID });
 const workflowId = 222333;
 const payload = {
-  provider: "leadpages",
-  trigger_type: "submitted_landing_page",
-  properties: {
-    landing_page: "My Landing Page"
-  }
+  triggers: {[
+    provider: "leadpages",
+    trigger_type: "submitted_landing_page",
+    properties: {
+      landing_page: "My Landing Page"
+    }
+  ]}
 }
 
 client.createTrigger(workflowId, payload)
@@ -747,11 +751,13 @@ const client = require('drip-nodejs')({ token: YOUR_API_KEY, accountId: YOUR_ACC
 const workflowId = 222333;
 const triggerId = "abc123";
 const payload = {
-  provider: "leadpages",
-  trigger_type: "submitted_landing_page",
-  properties: {
-    landing_page: "My Landing Page"
-  }
+  triggers: {[
+    provider: "leadpages",
+    trigger_type: "submitted_landing_page",
+    properties: {
+      landing_page: "My Landing Page"
+    }
+  ]}
 }
 
 client.updateTrigger(workflowId, triggerId, payload)
