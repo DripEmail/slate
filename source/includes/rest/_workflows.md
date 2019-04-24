@@ -627,13 +627,13 @@ end
 const client = require('drip-nodejs')({ token: YOUR_API_KEY, accountId: YOUR_ACCOUNT_ID });
 const workflowId = 222333;
 const payload = {
-  triggers: {[
+  triggers: [{
     provider: "leadpages",
     trigger_type: "submitted_landing_page",
     properties: {
       landing_page: "My Landing Page"
     }
-  ]}
+  }]
 };
 
 client.createTrigger(workflowId, payload)
@@ -751,13 +751,13 @@ const client = require('drip-nodejs')({ token: YOUR_API_KEY, accountId: YOUR_ACC
 const workflowId = 222333;
 const triggerId = "abc123";
 const payload = {
-  triggers: {[
+  triggers: [{
     provider: "leadpages",
     trigger_type: "submitted_landing_page",
     properties: {
       landing_page: "My Landing Page"
     }
-  ]}
+  }]
 };
 
 client.updateTrigger(workflowId, triggerId, payload)
