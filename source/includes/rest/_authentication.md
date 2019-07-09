@@ -1,6 +1,6 @@
 # Authentication
 
-> For private integrations, you will need to use your personal API Token (found [here](https://www.getdrip.com/user/edit)) via the `api_key` setting and must be Base64 encoded before use:
+> For private integrations, you will need to use your personal API Token (found [here](https://www.getdrip.com/user/edit)) via the `api_key` setting. The API Token is the username portion of the Basic Authentication scheme, with an empty password. (Note the trailing colon to indicate an empty password.)
 
 ```ruby
 require 'drip-ruby'
@@ -25,7 +25,11 @@ const client = require('drip-nodejs')(
 ```shell
 curl "api_endpoint_here" \
   -H 'User-Agent: Your App Name (www.yourapp.com)' \
-  -H 'Authorization: Basic (YOUR_API_KEY)'
+  -H 'Authorization: Basic $(echo YOUR_API_KEY: | base64)'
+
+curl "api_endpoint_here" \
+  -H 'User-Agent: Your App Name (www.yourapp.com)' \
+  -u '(YOUR_API_KEY):'
 ```
 
 > For public integrations, for example, when allowing your customers within your application to authorize access directly to their Drip accounts, pass in the user's OAuth token via the `access_token` setting or pass the `Bearer` token type when using the JS wrapper:
