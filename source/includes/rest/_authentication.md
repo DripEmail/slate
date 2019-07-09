@@ -29,7 +29,7 @@ curl "api_endpoint_here" \
 
 curl "api_endpoint_here" \
   -H 'User-Agent: Your App Name (www.yourapp.com)' \
-  -u '(YOUR_API_KEY):'
+  -u 'YOUR_API_KEY:'
 ```
 
 > For public integrations, for example, when allowing your customers within your application to authorize access directly to their Drip accounts, pass in the user's OAuth token via the `access_token` setting or pass the `Bearer` token type when using the JS wrapper:
