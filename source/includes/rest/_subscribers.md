@@ -272,6 +272,8 @@ client.createUpdateSubscriber(payload)
 
 If you need to create or update a collection of subscribers at once, use our [batch API](/) instead.
 
+**Note:** Repeatedly updating the same subscriber is not allowed and will cause a resource conflict 409 error with the message "Too many concurrent requests for the same subscriber".
+
 ### Arguments
 
 <table>
