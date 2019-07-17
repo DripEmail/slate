@@ -272,7 +272,7 @@ client.createUpdateSubscriber(payload)
 
 If you need to create or update a collection of subscribers at once, use our [batch API](/) instead.
 
-**Note:** Concurrently updating the same subscriber via multiple API calls is not supported and will fail with a rate limit error and the message "Too many concurrent requests for the same subscriber". You should retry the call after a short wait period to let the other requests to the same subscriber complete. 
+**Note:** Concurrently updating the same subscriber via multiple API calls is not supported and will fail with a rate limit error and the message "Too many concurrent requests for the same subscriber". You should retry the call after a short wait period to let the other requests to the same subscriber complete. Triggering this rate limit does not mean you've consumed your overall API rate limited capacity.
 
 ### Arguments
 
