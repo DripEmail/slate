@@ -289,8 +289,8 @@ end
               <td>Optional. The quantity of the item ordered. Defaults to 1.</td>
             </tr>
             <tr>
-              <td><code>discount</code></td>
-              <td>Optional. The discount on the items, taking quantity into account. For example, a $2.66 discount per item would be $5.34 if that item was of quantity 2. Defaults to 0.</td>
+              <td><code>discounts</code></td>
+              <td>Optional. The discounts on the items, taking quantity into account. For example, a $2.66 discount per item would be $5.34 if that item was of quantity 2. Defaults to 0.</td>
             </tr>
             <tr>
               <td><code>taxes</code></td>
