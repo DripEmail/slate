@@ -37,7 +37,7 @@ curl -X POST "https://api.getdrip.com/v3/YOUR_ACCOUNT_ID/shopper_activity/cart" 
         ],
         "price": 11.16,
         "quantity": 2,
-        "discount": 5.34,
+        "discounts": 5.34,
         "total": 16.99,
         "product_url": "https://mysuperstore.com/dp/B01J4SWO1G",
         "image_url": "https://www.getdrip.com/images/example_products/water_bottle.png",
@@ -79,7 +79,7 @@ response = client.create_cart_activity_event(
       ],
       price: 11.16,
       quantity: 2,
-      discount: 5.34,
+      discounts: 5.34,
       total: 16.99,
       product_url: "https://mysuperstore.com/dp/B01J4SWO1G",
       image_url: "https://www.getdrip.com/images/example_products/water_bottle.png",
@@ -207,8 +207,8 @@ end
               <td>Optional. The quantity of the item ordered. Defaults to 1.</td>
             </tr>
             <tr>
-              <td><code>discount</code></td>
-              <td>Optional. The discount on the items, taking quantity into account. For example, a $2.66 discount per item would be $5.34 if that item was of quantity 2. Defaults to 0.</td>
+              <td><code>discounts</code></td>
+              <td>Optional. The discounts on the items, taking quantity into account. For example, a $2.66 discount per item would be $5.34 if that item was of quantity 2. Defaults to 0.</td>
             </tr>
             <tr>
               <td><code>total</code></td>
