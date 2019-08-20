@@ -70,10 +70,6 @@ The following are treated as special properties. All other data passed in will b
       <td><code>failure</code></td>
       <td>Optional. A callback function that is executed if the request fails.</td>
     </tr>
-    <tr>
-      <td><code>drip_unknown_status</code></td>
-      <td>Optional. A Boolean specifying whether the identified Subscriber should be subscribed (<code>false</code>) or pending subscription (<code>true</code>).
-    </tr>
   </tbody>
 </table>
 
