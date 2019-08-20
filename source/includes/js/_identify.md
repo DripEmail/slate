@@ -20,7 +20,7 @@ The `identify` method pushes subscriber data into Drip. If the subscriber is not
 
 ### Properties
 
-The following are treated as special properties. All other data passed in will be added to the subscriber's custom fields. Keys should be lowercase, with words separated by underscores.
+The following are treated as special properties. All other data passed in will be added to the subscriber's custom fields. Keys should be lowercase, with words separated by underscores. Keys that begin with <code>drip_</code> are reserved for internal Drip usage.
 
 <table>
   <thead>
@@ -69,6 +69,10 @@ The following are treated as special properties. All other data passed in will b
     <tr>
       <td><code>failure</code></td>
       <td>Optional. A callback function that is executed if the request fails.</td>
+    </tr>
+    <tr>
+      <td><code>drip_unknown_status</code></td>
+      <td>Optional. A Boolean specifying whether the identified Subscriber should be subscribed (<code>false</code>) or pending subscription (<code>true</code>).
     </tr>
   </tbody>
 </table>
