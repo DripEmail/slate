@@ -650,45 +650,19 @@ This endpoint was previously labeled `unsubscribe`.
   </tbody>
 </table>
 
-## Unsubscribe from all mailings
+## Update a subscriber's status
 
-> To unsubscribe a subscriber from all mailings:
+> To update a subscriber's status:
 
 ```shell
-curl -X POST "https://api.getdrip.com/v2/YOUR_ACCOUNT_ID/subscribers/ID_OR_EMAIL/unsubscribe_all" \
+curl -X PUT "https://api.getdrip.com/v2/YOUR_ACCOUNT_ID/subscribers/ID_OR_EMAIL/status" \
   -H 'User-Agent: Your App Name (www.yourapp.com)' \
   -u YOUR_API_KEY:
-```
-
-```ruby
-require 'drip'
-
-client = Drip::Client.new do |c|
-  c.api_key = "YOUR API KEY"
-  c.account_id = "YOUR_ACCOUNT_ID"
-end
-
-subscriber_email = "john@acme.com"
-response = client.unsubscribe_from_all(subscriber_email)
-
-if response.success?
-  puts response.body["subscribers"]
-end
-```
-
-```javascript
-// npm install drip-nodejs --save
-
-const client = require('drip-nodejs')({ token: YOUR_API_KEY, accountId: YOUR_ACCOUNT_ID });
-const idOrEmail = "someone@example.com";
-
-client.unsubscribeFromAllMailings(idOrEmail)
-  .then((response) => {
-    // Handle `response.body`
-  })
-  .catch((error) => {
-    // Handle errors
-  });
+  -d @- << EOF
+{
+  "status": "active"
+}
+EOF
 ```
 
 > The response looks like this:
@@ -703,11 +677,25 @@ client.unsubscribeFromAllMailings(idOrEmail)
 
 ### HTTP Endpoint
 
-`POST /v2/:account_id/subscribers/:id_or_email/unsubscribe_all`
+`PUT /v2/:account_id/subscribers/:id_or_email/status`
 
 ### Arguments
 
-None.
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>status</code></td>
+      <td>The subscriber's desired status: <code>active</code> or <code>unsubscribed</code>.</td>
+    </tr>
+    <tr>
+  </tbody>
+</table>
 
 ## Delete a subscriber
 
