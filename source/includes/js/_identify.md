@@ -20,7 +20,7 @@ The `identify` method pushes subscriber data into Drip. If the subscriber is not
 
 ### Properties
 
-The following are treated as special properties. All other data passed in will be added to the subscriber's custom fields. Keys should be lowercase, with words separated by underscores.
+The following are treated as special properties. All other data passed in will be added to the subscriber's custom fields. Keys should be lowercase, with words separated by underscores. Keys that begin with <code>drip_</code> are reserved for internal Drip usage.
 
 <table>
   <thead>
