@@ -381,6 +381,10 @@ If you need to create or update a collection of subscribers at once, use our [ba
       <td><code>eu_consent_message</code></td>
       <td>Optional. A String containing the message the subscriber granted or denied their consent to.</td>
     </tr>
+    <tr>
+      <td><code>status</code></td>
+      <td>Optional. A String specifying the subscriber's status: either <code>active</code> or <code>unsubscribed</code>.</td>
+    </tr>
   </tbody>
 </table>
 
