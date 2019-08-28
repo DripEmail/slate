@@ -387,7 +387,7 @@ If you need to create or update a collection of subscribers at once, use our [ba
     </tr>
     <tr>
       <td><code>new_subscriber_status</code></td>
-      <td>Optional. A String specifying the subscriber's status: either <code>active</code> or <code>unsubscribed</code>. This status will only be applied to new subscriber records. If an existing subscriber is found in Drip, it will be ignored.</td>
+      <td>Optional. A String specifying the subscriber's status: either <code>active</code> or <code>unsubscribed</code>. This status will only be applied to new subscriber records. If an existing subscriber is found in Drip, it will be ignored. If both <code>status</code> and <code>new_subscriber_status</code> are included, <code>new_subscriber_status</code> will be ignored.</td>
     </tr>
   </tbody>
 </table>
