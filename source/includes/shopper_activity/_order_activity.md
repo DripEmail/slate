@@ -354,16 +354,8 @@ end
               <td>Optional. The billing street address.</td>
             </tr>
             <tr>
-              <td><code>address1</code></td>
-              <td>Optional. An alias for <code>address_1</code>.</td>
-            </tr>
-            <tr>
               <td><code>address_2</code></td>
               <td>Optional. Additional line of the billing street address.</td>
-            </tr>
-            <tr>
-              <td><code>address2</code></td>
-              <td>Optional. An alias for <code>address_2</code>.</td>
             </tr>
             <tr>
               <td><code>city</code></td>
@@ -376,10 +368,6 @@ end
             <tr>
               <td><code>postal_code</code></td>
               <td>Optional. The billing address postal code.</td>
-            </tr>
-            <tr>
-              <td><code>zip</code></td>
-              <td>Optional. An alias for <code>postal_code</code>.</td>
             </tr>
             <tr>
               <td><code>country</code></td>
@@ -427,16 +415,8 @@ end
               <td>Optional. The shipping street address.</td>
             </tr>
             <tr>
-              <td><code>address1</code></td>
-              <td>Optional. An alias for <code>address_1</code>.</td>
-            </tr>
-            <tr>
               <td><code>address_2</code></td>
               <td>Optional. Additional line of the shipping street address.</td>
-            </tr>
-            <tr>
-              <td><code>address2</code></td>
-              <td>Optional. An alias for <code>address_2</code>.</td>
             </tr>
             <tr>
               <td><code>city</code></td>
@@ -449,10 +429,6 @@ end
             <tr>
               <td><code>postal_code</code></td>
               <td>Optional. The shipping address postal code.</td>
-            </tr>
-            <tr>
-              <td><code>zip</code></td>
-              <td>Optional. An alias for <code>postal_code</code>.</td>
             </tr>
             <tr>
               <td><code>country</code></td>
