@@ -30,9 +30,10 @@
 - Responses must have a `Content-Type` header of `application/json`
 - A response with a `2xx` status will be considered successful
     - A successful response should contain a body that is a parseable JSON _document_ (i.e. the top level must be either an object or an array)
-    - The returned document should not exceed 350 KB in size
+    - The returned document must not exceed 350 KB in size
 - A `3xx` response will be followed as redirects per the HTTP specification
 - A client error response (those in the `4xx` range) will be considered a permanent error
+    - Except `429`; this signals to Drip that the request should be tried again later
 - A server error response (those in the `5xx` range) will be considered a temporary error
 - No other response codes are supported
 
@@ -44,3 +45,5 @@ When a `2xx` response is received, Drip will use whatever data is given, and wil
     - If retries continue to fail, we will give up sending the individual email
 - A permanent error response will cause the the email to not be sent
 - In order to optimize your sending throughput, we will time out any response or series of redirects after 3 seconds
+    - If you need additional time to process Drip's request (e.g. to warm a cache), you can respond with a `429`, at
+      which point we will retry the request with exponential backoff
