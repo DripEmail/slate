@@ -176,11 +176,12 @@ end
           <tbody>
             <tr>
               <td><code>product_id</code></td>
-              <td>Required. A unique identifier for the product from the <code>provider</code>.</td>
+              <td>Required. A unique identifier for the product from the <code>provider</code>.
+              (Note: This field is used by segmentation.)</td>
             </tr>
             <tr>
               <td><code>product_variant_id</code></td>
-              <td>Required. If applicable, a unique identifier for the specific product variant from the provider. For example, a t-shirt may have one product_id, but several product_variant_ids for sizes and colors. If a product does not have multiple variants and you do not have a variant identifier in your system, repeat the product_id here. (Note: this field is used by segmentation.)</td>
+              <td>Required. If applicable, a unique identifier for the specific product variant from the <code>provider</code>. For example, a t-shirt may have one product_id, but several product_variant_ids for sizes and colors. If a product does not have multiple variants and you do not have a variant identifier in your system, repeat the product_id here. (Note: this field is used by segmentation.)</td>
             </tr>
             <tr>
               <td><code>sku</code></td>
