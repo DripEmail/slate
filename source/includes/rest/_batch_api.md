@@ -180,7 +180,7 @@ const payload = {
     {
       subscribers: [
         {
-          email: 'someone@example.com'
+          email: "someone@example.com"
         }
       ]
     }
