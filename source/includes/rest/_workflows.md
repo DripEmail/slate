@@ -362,11 +362,13 @@ end
 const client = require('drip-nodejs')({ token: YOUR_API_KEY, accountId: YOUR_ACCOUNT_ID });
 const workflowId = 222333;
 const payload = {
-  email: "john@acme.com",
-  time_zone: "America/Los_Angeles",
-  custom_fields: {
-    shirt_size: "Medium"
-  }
+  subscribers: [{
+    email: "john@acme.com",
+    time_zone: "America/Los_Angeles",
+    custom_fields: {
+      shirt_size: "Medium"
+    }
+  }]
 }
 
 client.startOnWorkflow(workflowId, payload)
