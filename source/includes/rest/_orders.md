@@ -26,9 +26,9 @@ Note that the legacy Orders endpoint will continue to function. We will give fai
     "shirt_size": "Medium",
     "color": "red"
   },
-  "occurred_at": 2013-06-21T10:31:58Z,
-  "closed_at": 2013-06-21T10:35:58Z,
-  "cancelled_at": nil,
+  "occurred_at": "2013-06-21T10:31:58Z",
+  "closed_at": "2013-06-21T10:35:58Z",
+  "cancelled_at": null,
   "financial_state": "paid",
   "fulfillment_state": "fulfilled",
   "billing_address": {
