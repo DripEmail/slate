@@ -2,6 +2,8 @@
 
 Order Activity will show up on a person's activity timeline as an event. The event is based on the <code>action</code> sent with the order payload. For example, sending <code>placed</code> will result in a "Placed an order" event and sending <code>updated</code> will result in an "Updated an order" event.
 
+Order Activity places special value on <code>action</code> with the <code>placed</code> value. This event will determine when an order is considered to have originated based on the <code>occurred_at</code>. If you send an Order Activity <code>"action": "placed"</code> event without including a valid <code>occurred_at</code> value, the order will be considered to have orriginated at the current time. If you send Order Activity events without previously sending <code>placed</code>, the order will be considered to have originated at the current time the first event was received.
+
 Drip will keep a person’s Lifetime Value (LTV) up-to-date with their orders. For example, if a customer places an order with a <code>grand_total</code> of $100, their LTV will be incremented by $100. If the order is then updated, paid, or fulfilled with a <code>grand_total</code> value of $105, the customer’s LTV will increase by $5. If the order is then canceled or refunded with a <code>refund_amount</code> of $105, the customer’s LTV will decrease by $105.
 
 <h2 id="sapi-create-or-update-order">Create or update an order</h1>
