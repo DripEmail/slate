@@ -27,7 +27,7 @@ You can use the <code>track</code> method to send product views to Drip. By send
 
 ### Properties
 
-Including the following optional custom event properties to enable automation and segmentation options in Drip.
+Include the following optional custom event properties to enable automation and segmentation options in Drip.
 
 <table>
   <thead>
