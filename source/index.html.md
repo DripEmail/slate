@@ -34,6 +34,7 @@ includes_js_api:
   - js/getting_started
   - js/identify
   - js/track
+  - js/product_views
   - js/tagging
   - js/campaign_subscriptions
   - js/forms
