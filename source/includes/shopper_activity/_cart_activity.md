@@ -17,6 +17,7 @@ curl -X POST "https://api.getdrip.com/v3/YOUR_ACCOUNT_ID/shopper_activity/cart" 
   {
     "provider": "my_custom_platform",
     "email": "user@gmail.com",
+    "initial_status": "active",
     "action": "created",
     "cart_id": "456445746",
     "occurred_at": "2019-01-17T20:50:00Z",
@@ -59,6 +60,7 @@ end
 response = client.create_cart_activity_event(
   provider: "my_custom_platform",
   email: "user@gmail.com", # or person_id
+  initial_status: "active",
   action: "created",
   cart_id: "456445746",
   occurred_at: "2019-01-17T20:50:00Z",
@@ -128,6 +130,10 @@ end
     <tr>
       <td><code>email</code></td>
       <td>Optional. The person's email address. Either <code>person_id</code> or <code>email</code> must be included. If both are included, <code>email</code> is ignored.</td>
+    </tr>
+    <tr>
+      <td><code>initial_status</code></td>
+      <td>Optional. The person's status whether <code>active</code> or <code>unsubscribed</code>. If this field is not included, the person will become subscribed.
     </tr>
     <tr>
       <td><code>action</code></td>

@@ -74,6 +74,10 @@ On January 7, 2019 we renamed Subscribers to People to better represent who youâ
       <td>The subscriber's status whether <code>active</code> or <code>unsubscribed</code>.</td>
     </tr>
     <tr>
+      <td><code>initial_status</code></td>
+      <td>The subscriber's known status whether <code>active</code> or <code>unsubscribed</code>. To be used instead of <code>status</code> if subscriber's status is unchanged.</td>
+    </tr>
+    <tr>
       <td><code>email</code></td>
       <td>The subscriber's email address.</td>
     </tr>
@@ -385,6 +389,10 @@ If you need to create or update a collection of subscribers at once, use our [ba
     <tr>
       <td><code>status</code></td>
       <td>Optional. A String specifying the subscriber's status: either <code>active</code> or <code>unsubscribed</code>.</td>
+    </tr>
+    <tr>
+      <td><code>initial_status</code></td>
+      <td>Optional. A String specifying the subscriber's known status: either <code>active</code> or <code>unsubscribed</code>. To be used if subscriber's status is unchanged.</td>
     </tr>
   </tbody>
 </table>
