@@ -67,7 +67,7 @@ else
 end
 ```
 
-> Responds with a <code>202 Accepted</code> if successful. That means the server accepted the request and queued it for processing. The response includes a unique request_id that can be used to check the status of the request later on:
+> Responds with a <code>202 Accepted</code> if successful. That means the server accepted the request and queued it for processing.
 
 ```json
 {
