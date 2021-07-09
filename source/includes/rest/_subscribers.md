@@ -561,9 +561,9 @@ client.fetchSubscriber(idOrEmail)
 
 None.
 
-## Remove a subscriber from one or all campaigns
+## Remove a subscriber from one or all Email Series Campaigns
 
-> To remove a subscriber from all campaigns:
+> To remove a subscriber from all Email Series s:
 
 ```shell
 curl -X POST "https://api.getdrip.com/v2/YOUR_ACCOUNT_ID/subscribers/ID_OR_EMAIL/remove" \
@@ -573,7 +573,7 @@ curl -X POST "https://api.getdrip.com/v2/YOUR_ACCOUNT_ID/subscribers/ID_OR_EMAIL
 
 ```ruby
 ##
-# To remove a subscriber from all campaigns:
+# To remove a subscriber from all Email Series Campaigns:
 ##
 
 require 'drip'
@@ -658,7 +658,7 @@ This endpoint was previously labeled `unsubscribe`.
   <tbody>
     <tr>
       <td><code>campaign_id</code></td>
-      <td>Optional. The campaign from which to remove the subscriber. Defaults to all.</td>
+      <td>Optional. The Email Series Campaign from which to remove the subscriber. Defaults to all.</td>
     </tr>
   </tbody>
 </table>

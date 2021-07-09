@@ -163,7 +163,7 @@ due to a hard bounce or spam complaint.
 }
 ```
 
-This event is triggered when a subscriber subscribes to a campaign.
+This event is triggered when a subscriber subscribes to an Email Series Campaign.
 
 ## subscriber.removed_from_campaign
 
@@ -182,7 +182,7 @@ This event is triggered when a subscriber subscribes to a campaign.
 }
 ```
 
-This event is triggered when a subscriber is removed from a campaign.
+This event is triggered when a subscriber is removed from an Email Series Campaign.
 
 ## subscriber.unsubscribed_from_campaign
 
@@ -201,7 +201,7 @@ This event is triggered when a subscriber is removed from a campaign.
 }
 ```
 
-This event is triggered when a subscriber unsubscribes from a campaign.
+This event is triggered when a subscriber unsubscribes from an Email Series Campaign.
 
 ## subscriber.unsubscribed_all
 
@@ -252,7 +252,7 @@ This event is triggered when a subscription is reactivated.
 }
 ```
 
-This event is triggered when a subscriber completes a campaign.
+This event is triggered when a subscriber completes an Email Series Campaign.
 
 ## subscriber.applied_tag
 

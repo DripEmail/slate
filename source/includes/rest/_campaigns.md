@@ -1,6 +1,6 @@
-# Campaigns
+# Email Series Campaigns
 
-> Campaigns are represented as follows:
+> Email Series Campaigns are represented as follows:
 
 ```json
 {
@@ -33,7 +33,7 @@
 }
 ```
 
-> All responses containing campaign data also include the following top-level link data:
+> All responses containing Email Series Campaign data also include the following top-level link data:
 
 ```json
 {
@@ -57,15 +57,15 @@
   <tbody>
     <tr>
       <td><code>id</code></td>
-      <td>A read-only Drip generated unique id used to identify each campaign record.</td>
+      <td>A read-only Drip generated unique id used to identify each Email Series Campaign record.</td>
     </tr>
     <tr>
       <td><code>status</code></td>
-      <td>Returns whether the campaign is active, paused or in draft.</td>
+      <td>Returns whether the Email Series Campaign is active, paused or in draft.</td>
     </tr>
     <tr>
       <td><code>name</code></td>
-      <td>The private name given to the campaign.</td>
+      <td>The private name given to the Email Series Campaign.</td>
     </tr>
     <tr>
       <td><code>from_name</code></td>
@@ -93,11 +93,11 @@
     </tr>
     <tr>
       <td><code>start_immediately</code></td>
-      <td>Returns true if the first email in the campaign is set to be delivered immediately after a campaign subscription.</td>
+      <td>Returns true if the first email in the Email Series Campaign is set to be delivered immediately after a Email Series Campaign subscription.</td>
     </tr>
     <tr>
       <td><code>double_optin</code></td>
-      <td>Returns true if double opt-in is enabled for the campaign.</td>
+      <td>Returns true if double opt-in is enabled for the Email Series Campaign.</td>
     </tr>
     <tr>
       <td><code>send_to_confirmation_page</code></td>
@@ -121,42 +121,42 @@
     </tr>
     <tr>
       <td><code>bcc</code></td>
-      <td>A blind copy email address set for all campaign email deliveries.</td>
+      <td>A blind copy email address set for all Email Series Campaign email deliveries.</td>
     </tr>
     <tr>
       <td><code>email_count</code></td>
-      <td>Returns a count of all emails associated with the campaign. Includes all email statuses.</td>
+      <td>Returns a count of all emails associated with the Email Series Campaign. Includes all email statuses.</td>
     </tr>
     <tr>
       <td><code>active_subscriber_count</code></td>
-      <td>Returns a count of all subscribers who are actively subscribed to the campaign.</td>
+      <td>Returns a count of all subscribers who are actively subscribed to the Email Series Campaign.</td>
     </tr>
     <tr>
       <td><code>unsubscribed_subscriber_count</code></td>
-      <td>Returns a count of all subscribers who unsubscribed from the campaign via a delivered email.</td>
+      <td>Returns a count of all subscribers who unsubscribed from the Email Series Campaign via a delivered email.</td>
     </tr>
     <tr>
       <td><code>created_at</code></td>
-      <td>A timestamp representing when the campaign was first created.</td>
+      <td>A timestamp representing when the Email Series Campaign was first created.</td>
     </tr>
     <tr>
       <td><code>href</code></td>
-      <td>The url designated for retrieving the campaign record via the REST API.</td>
+      <td>The url designated for retrieving the Email Series Campaign record via the REST API.</td>
     </tr>
     <tr>
       <td><code>links</code></td>
-      <td>An object containing the REST API URL for the account, any associated campaign forms and subscribers subscribed to the campaign.</td>
+      <td>An object containing the REST API URL for the account, any associated Email Series Campaign forms and subscribers subscribed to the Email Series Campaign.</td>
     </tr>
     <tr>
       <td><code>forms</code></td>
-      <td>An object containing the associated form created for the campaign. This is only populated if a form is created for the campaign. <a href="#forms">Refer to Forms</a> for an overview of the properties returned here.</td>
+      <td>An object containing the associated form created for the Email Series Campaign. This is only populated if a form is created for the Email Series Campaign. <a href="#forms">Refer to Forms</a> for an overview of the properties returned here.</td>
     </tr>
   </tbody>
 </table>
 
-## List all campaigns
+## List all Email Series Campaigns
 
-> To list all campaigns:
+> To list all Email Series Campaigns:
 
 ```shell
 curl "https://api.getdrip.com/v2/YOUR_ACCOUNT_ID/campaigns" \
@@ -242,9 +242,9 @@ client.listCampaigns(options)
   </tbody>
 </table>
 
-## Fetch a campaign
+## Fetch an Email Series Campaign
 
-> To fetch a specific campaign:
+> To fetch a specific Email Series Campaign:
 
 ```shell
 curl "https://api.getdrip.com/v2/YOUR_ACCOUNT_ID/campaigns/CAMPAIGN_ID" \
@@ -305,9 +305,9 @@ client.fetchCampaign(campaignId)
 
 None.
 
-## Activate a campaign
+## Activate an Email Series Campaign
 
-> To activate a campaign:
+> To activate an Email Series Campaign:
 
 ```shell
 curl -X POST "https://api.getdrip.com/v2/YOUR_ACCOUNT_ID/campaigns/CAMPAIGN_ID/activate" \
@@ -346,7 +346,7 @@ client.activateCampaign(campaignId)
   });
 ```
 
-> Responds with a `204 No Content` if successful. If the campaign cannot be activated, returns a `422 Unprocessable Entity`.
+> Responds with a `204 No Content` if successful. If the Email Series Campaign cannot be activated, returns a `422 Unprocessable Entity`.
 
 ### HTTP Endpoint
 
@@ -356,9 +356,9 @@ client.activateCampaign(campaignId)
 
 None.
 
-## Pause a campaign
+## Pause an Email Series Campaign
 
-> To pause a campaign:
+> To pause an Email Series Campaign:
 
 ```shell
 curl -X POST "https://api.getdrip.com/v2/YOUR_ACCOUNT_ID/campaigns/CAMPAIGN_ID/pause" \
@@ -397,7 +397,7 @@ client.pauseCampaign(campaignId)
   });
 ```
 
-> Responds with a `204 No Content` if successful. If the campaign cannot be paused, returns a `422 Unprocessable Entity`.
+> Responds with a `204 No Content` if successful. If the Email Series Campaign cannot be paused, returns a `422 Unprocessable Entity`.
 
 ### HTTP Endpoint
 
@@ -407,9 +407,9 @@ client.pauseCampaign(campaignId)
 
 None.
 
-## List all subscribers subscribed to a campaign
+## List all subscribers subscribed to an Email Series Campaign
 
-> To list subscribers on a campaign:
+> To list subscribers on an Email Series Campaign:
 
 ```shell
 curl "https://api.getdrip.com/v2/YOUR_ACCOUNT_ID/campaigns/CAMPAIGN_ID/subscribers" \
@@ -503,9 +503,9 @@ client.listAllSubscribesToCampaign(campaignId)
   </tbody>
 </table>
 
-## Subscribe someone to a campaign
+## Subscribe someone to an Email Series Campaign
 
-> To start a subscriber on a campaign:
+> To start a subscriber on an Email Series Campaign:
 
 ```shell
 curl -X POST "https://api.getdrip.com/v2/YOUR_ACCOUNT_ID/campaigns/CAMPAIGN_ID/subscribers" \
@@ -614,7 +614,7 @@ client.subscribeToCampaign(campaignId, payload)
     </tr>
     <tr>
       <td><code>double_optin</code></td>
-      <td>Optional. If <code>true</code>, the double opt-in confirmation email is sent; if <code>false</code>, the confirmation email is skipped. Defaults to the value set on the campaign.</td>
+      <td>Optional. If <code>true</code>, the double opt-in confirmation email is sent; if <code>false</code>, the confirmation email is skipped. Defaults to the value set on the Email Series Campaign.</td>
     </tr>
     <tr>
       <td><code>starting_email_index</code></td>
@@ -630,7 +630,7 @@ client.subscribeToCampaign(campaignId, payload)
     </tr>
     <tr>
       <td><code>reactivate_if_removed</code></td>
-      <td>Optional. If <code>true</code>, re-subscribe the subscriber to the campaign if there is a removed subscriber in Drip with the same email address; otherwise, respond with <code>422 Unprocessable Entity</code>. Defaults to <code>true</code>.</td>
+      <td>Optional. If <code>true</code>, re-subscribe the subscriber to the Email Series Campaign if there is a removed subscriber in Drip with the same email address; otherwise, respond with <code>422 Unprocessable Entity</code>. Defaults to <code>true</code>.</td>
     </tr>
     <tr>
       <td><code>prospect</code></td>
@@ -652,9 +652,9 @@ client.subscribeToCampaign(campaignId, payload)
   </tbody>
 </table>
 
-## List all of a subscriber's campaign subscriptions
+## List all of a subscriber's Email Series Campaign subscriptions
 
-> To list campaign subscriptions for a subscriber:
+> To list Email Series Campaign subscriptions for a subscriber:
 
 ```shell
 curl "https://api.getdrip.com/v2/YOUR_ACCOUNT_ID/subscribers/SUBSCRIBER_ID/campaign_subscription" \
@@ -698,7 +698,7 @@ client.subscriberCampaignSubscriptions(subscriberId)
 > The response looks like this:
 
 ```json
-# The campaign subscriptions property is an array of campaign subscription objects.
+# The Email Series Campaign subscriptions property is an array of campaign subscription objects.
 {
   "links": {
     "campaign_subscriptions.account": "https://api.getdrip.com/v2/accounts/{campaign_subscriptions.account}",
