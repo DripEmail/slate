@@ -1,4 +1,4 @@
-# Single-Email Campaigns (aka Broadcasts)
+# Single-Email Campaigns <br/>(aka Broadcasts)
 
 > Single-Email Campaigns are represented as follows:
 
