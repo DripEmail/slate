@@ -86,7 +86,7 @@
     </tr>
     <tr>
       <td><code>links</code></td>
-      <td>An object containing URLs for campaign, broadcast and conversion resources. Note, conversions are represented as "Goals".</td>
+      <td>An object containing URLs for campaign and conversion resources. Note, conversions are represented as "Goals".</td>
     </tr>
   </tbody>
 </table>

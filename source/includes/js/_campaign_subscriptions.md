@@ -1,6 +1,6 @@
-# Campaign Subscriptions
+# Email Series Campaign Subscriptions
 
-## Subscribe to a Campaign
+## Subscribe to an Email Series Campaign
 
 > Example request
 
@@ -22,7 +22,7 @@ _dcq.push(
 );
 ```
 
-This method will add a subscriber directly to campaign. If you would like to add a subscriber to your account without subscribing them to a campaign, use an <a href="#identifying-visitors">identify call</a> instead.
+This method will add a subscriber directly to an Email Series Campaign. If you would like to add a subscriber to your account without subscribing them to an Email Series Campaign, use an <a href="#identifying-visitors">identify call</a> instead.
 
 ### Arguments
 
@@ -36,7 +36,7 @@ This method will add a subscriber directly to campaign. If you would like to add
   <tbody>
     <tr>
       <td><code>campaign_id</code></td>
-      <td>Required. The String campaign ID, which can be found on the campaign settings page.</td>
+      <td>Required. The String campaign ID, which can be found on the Email Series Campaign settings page.</td>
     </tr>
     <tr>
       <td><code>fields</code></td>
@@ -44,7 +44,7 @@ This method will add a subscriber directly to campaign. If you would like to add
     </tr>
     <tr>
       <td><code>double_optin</code></td>
-      <td>Optional. If <code>true</code>, the double opt-in confirmation email is sent; if <code>false</code>, the confirmation email is skipped. Defaults to the value set on the campaign.</td>
+      <td>Optional. If <code>true</code>, the double opt-in confirmation email is sent; if <code>false</code>, the confirmation email is skipped. Defaults to the value set on the Email Series Campaign.</td>
     </tr>
     <tr>
       <td><code>success</code></td>
@@ -73,7 +73,7 @@ _dcq.push(
 );
 ```
 
-Use this method to unsubscribe a subscriber from one or all of your campaigns.
+Use this method to unsubscribe a subscriber from one or all of your Email Series Campaigns.
 
 ### Arguments
 
@@ -91,7 +91,7 @@ Use this method to unsubscribe a subscriber from one or all of your campaigns.
     </tr>
     <tr>
       <td><code>campaign_id</code></td>
-      <td>Optional. The String campaign ID, which can be found on the campaign settings page. If not included, the subscriber will be unsubscribed from all campaigns.</td>
+      <td>Optional. The String campaign ID, which can be found on the Email Series Campaign settings page. If not included, the subscriber will be unsubscribed from all Email Series Campaigns.</td>
     </tr>
     <tr>
       <td><code>success</code></td>

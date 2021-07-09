@@ -1,6 +1,6 @@
-# Broadcasts
+# Single-Email Campaigns (aka Broadcasts)
 
-> Broadcasts are represented as follows:
+> Single-Email Campaigns are represented as follows:
 
 ```json
 {
@@ -24,7 +24,7 @@
 }
 ```
 
-> All responses containing broadcast data also include the following top-level link data:
+> All responses containing Single-Email Campaign data also include the following top-level link data:
 
 ```json
 {
@@ -46,15 +46,15 @@
   <tbody>
     <tr>
       <td><code>id</code></td>
-      <td>A read-only Drip generated unique id used to identify each broadcast record.</td>
+      <td>A read-only Drip generated unique id used to identify each Single-Email Campaign record.</td>
     </tr>
     <tr>
       <td><code>status</code></td>
-      <td>Returns whether the broadcast is draft, canceled, scheduled, sent or sending.</td>
+      <td>Returns whether the Single-Email Campaign is draft, canceled, scheduled, sent or sending.</td>
     </tr>
     <tr>
       <td><code>name</code></td>
-      <td>The private name given to the broadcast.</td>
+      <td>The private name given to the Single-Email Campaign.</td>
     </tr>
     <tr>
       <td><code>from_name</code></td>
@@ -74,15 +74,15 @@
     </tr>
     <tr>
       <td><code>send_at</code></td>
-      <td>The timestamp representing when the broadcast will be delivered.</td>
+      <td>The timestamp representing when the Single-Email Campaign will be delivered.</td>
     </tr>
     <tr>
       <td><code>bcc</code></td>
-      <td>A list of emails designated to receive a blind copy of the broadcast.</td>
+      <td>A list of emails designated to receive a blind copy of the Single-Email Campaign.</td>
     </tr>
     <tr>
       <td><code>created_at</code></td>
-      <td>A read-only Drip generated timestamp for when the broadcast was first created.</td>
+      <td>A read-only Drip generated timestamp for when the Single-Email Campaign was first created.</td>
     </tr>
     <tr>
       <td><code>href</code></td>
@@ -90,7 +90,7 @@
     </tr>
     <tr>
       <td><code>subject</code></td>
-      <td>The broadcast email's subject.</td>
+      <td>The Single-Email Campaign's subject.</td>
     </tr>
     <tr>
       <td><code>html_body</code></td>
@@ -107,9 +107,9 @@
   </tbody>
 </table>
 
-## List all broadcasts
+## List all Single-Email Campaigns
 
-> To list broadcasts in an account:
+> To list Single-Email Campaigns in an account:
 
 ```shell
 curl "https://api.getdrip.com/v2/YOUR_ACCOUNT_ID/broadcasts" \
@@ -196,9 +196,9 @@ client.listBroadcasts(options)
   </tbody>
 </table>
 
-## Fetch a broadcast
+## Fetch a Single-Email Campaign
 
-> To fetch a specific broadcast:
+> To fetch a specific Single-Email Campaign:
 
 ```shell
 curl "https://api.getdrip.com/v2/YOUR_ACCOUNT_ID/broadcasts/BROADCAST_ID" \
